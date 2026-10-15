@@ -1,0 +1,32 @@
+grpcurl SaveCompte {"compte":{"solde":1500,"dateCreation":"2024-11-18","type":"COURANT"}}
+{
+  "compte": {
+    "id": "567c97ac-22ea-45fb-ab35-3a8ef13ef16e",
+    "solde": 1500,
+    "dateCreation": "2024-11-18"
+  }
+}
+grpcurl AllComptes {}
+{
+  "comptes": [
+    {
+      "id": "567c97ac-22ea-45fb-ab35-3a8ef13ef16e",
+      "solde": 1500,
+      "dateCreation": "2024-11-18"
+    }
+  ]
+}
+grpcurl TotalSolde {}
+{
+  "stats": {
+    "count": 1,
+    "sum": 1500,
+    "average": 1500
+  }
+}
+ERROR:
+  Code: NotFound
+  Message: Compte non trouvé
+
+Création, liste, statistiques et statut NOT_FOUND vérifiés sur le réseau gRPC.
+Toutes les assertions du scénario sont passées.

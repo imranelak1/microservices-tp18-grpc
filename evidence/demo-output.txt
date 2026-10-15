@@ -1,0 +1,31 @@
+grpcurl SaveCompte {"compte":{"solde":1500,"dateCreation":"2024-11-18","type":"COURANT"}}
+{
+  "compte": {
+    "id": "58f90283-4048-4af4-b9a5-86791f52b827",
+    "solde": 1500,
+    "dateCreation": "2024-11-18"
+  }
+}
+grpcurl AllComptes {}
+{
+  "comptes": [
+    {
+      "id": "567c97ac-22ea-45fb-ab35-3a8ef13ef16e",
+      "solde": 1500,
+      "dateCreation": "2024-11-18"
+    },
+    {
+      "id": "58f90283-4048-4af4-b9a5-86791f52b827",
+      "solde": 1500,
+      "dateCreation": "2024-11-18"
+    }
+  ]
+}
+grpcurl TotalSolde {}
+{
+  "stats": {
+    "count": 2,
+    "sum": 3000,
+    "average": 1500
+  }
+}
